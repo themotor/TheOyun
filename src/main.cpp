@@ -3,6 +3,14 @@
 int main()
 {
   motor::Engine engine;
-  static_cast<void>(engine);
+
+  motor::WindowOptions opts;
+  opts.height_ = 600;
+  opts.width_ = 800;
+  opts.title_ = "NABER!";
+  engine.InitializeWindow(std::move(opts));
+
+  for (;;)
+    ;
   return 0;
 }
