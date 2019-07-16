@@ -9,8 +9,5 @@ int main()
   opts.width_ = 800;
   opts.title_ = "NABER!";
   engine.InitializeWindow(std::move(opts));
-
-  for (;;)
-    ;
   return 0;
 }
