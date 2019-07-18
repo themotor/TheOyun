@@ -1,7 +1,13 @@
+#include "gflags/gflags.h"
+#include "glog/logging.h"
 #include "motor/engine.h"
 
-int main()
+int main(int argc, char** argv)
 {
+  gflags::ParseCommandLineFlags(&argc, &argv, true);
+  google::InitGoogleLogging(argv[0]);
+  LOG(INFO) << "Starting the game";
+
   motor::Engine engine;
 
   motor::WindowOptions opts;

@@ -7,6 +7,8 @@ cc_binary(
     srcs = ["main.cpp"],
     deps = [
         "@TheMotor//motor:engine",
+        "@glog//:glog",
+        "@com_github_gflags_gflags//:gflags",
     ],
     linkopts = select({
         "//:windows": [
