@@ -4,6 +4,7 @@
 
 int main(int argc, char** argv)
 {
+  FLAGS_alsologtostderr = true;
   gflags::ParseCommandLineFlags(&argc, &argv, true);
   google::InitGoogleLogging(argv[0]);
   LOG(INFO) << "Starting the game";
