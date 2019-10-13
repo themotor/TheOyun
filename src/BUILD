@@ -33,4 +33,5 @@ cc_binary(
             "-lGL",
         ],
     }),
+    data = glob(["shaders/**"])
 )
